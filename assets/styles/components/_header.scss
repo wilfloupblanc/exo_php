@@ -1,0 +1,100 @@
+@use "../main/font" as *;
+@use "../main/global" as *;
+@use "../main/mixins" as *;
+@use "../main/normalize" as *;
+@use "../main/variables" as *;
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 7rem;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2.5rem;
+
+        img {
+            height: 7rem;
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .user {
+        i {
+            font-size: 4rem;
+            margin-right: 1rem;
+        }
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #burger:not(:checked) + nav {
+        display: none;
+    }
+
+    #burger:checked + nav {
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        flex-wrap: wrap;
+        top: 7.6rem;
+        right: 0;
+        width: 40vw;
+        padding: 2rem;
+        box-shadow: 2px 5px 8px rgba($color: #000000, $alpha: 0.4);
+    }
+
+    @include desktop {
+        #burger:not(:checked) + nav, #burger:checked + nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 1rem;
+            width: 30rem;
+        }
+    }
+
+    .burger {
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .ph-list {
+        font-size: 4rem;
+    }
+
+    nav {
+        a {
+            text-align: center;
+            width: 100%;
+            margin: .4rem 0;
+            font-size: 2.5rem;
+
+        }
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

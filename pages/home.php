@@ -21,11 +21,11 @@
 
     <section>
 
-        <h2>Products</h2>
-        <ul>
+        <h2>Products :</h2>
+        <ul class="flex-container">
             <?php
             foreach ($products as $product) : ?>
-                <li>
+                <li class="col-6 col-tablet-3">
                     <a href="index.php?page=product&id=<?= $product['id'] ?>">
                         <?= $product['name']; ?>
                     </a>

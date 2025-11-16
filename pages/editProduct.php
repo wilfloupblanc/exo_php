@@ -53,23 +53,24 @@
         Edit Product
     </h1>
 
-    <form action="" method="POST">
+    <section class="form-container">
+        <form action="" method="POST">
 
-        <p>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="<?= $products['name'] ?>">
-        </p>
-        <p>
+
             <label for="price">Price</label>
             <input type="text" id="price" name="price" value="<?= $products['price'] ?>">
-        </p>
-        <p>
+
             <label for="description">Description</label>
             <textarea type="textarea" id="description" name="description"><?= $products['description'] ?></textarea>
-        </p>
 
-        <input type="hidden" value="<?= $products['id'] ?>" name="id">
 
-        <button type="submit">update</button>
-    </form>
+            <input type="hidden" value="<?= $products['id'] ?>" name="id">
+
+            <article class="submit-container" class="col-12">
+                <a href="" type="submit" class="bg-primary border-primary text-light">Update</a>
+            </article>
+        </form>
+    </section>
 </main>

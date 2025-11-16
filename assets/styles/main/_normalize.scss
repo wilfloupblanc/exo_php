@@ -1,0 +1,122 @@
+@use "./mixins" as *;
+@use "./font" as *;
+@use "./variables" as *;
+
+* {
+    box-sizing: border-box;
+    font-family: $font1;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    position: relative;
+    overflow-x: hidden;
+
+    a{
+        color: black;
+    }
+}
+
+main {
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-decoration: underline;
+    }
+
+    .form-container {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0 4rem;
+
+            label {
+                display: flex;
+                align-items: flex-end;
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+
+            input, textarea {
+                border: 1px solid grey;
+                border-radius: 4px;
+                resize: none;
+            }
+
+
+            input {
+                height: 3rem;
+            }
+
+            textarea {
+                height: 20rem;
+            }
+        }
+    }
+    .submit-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+
+        & > a {
+            margin: 0 1rem;
+            border-radius: 4px;
+            padding: 0.5rem;
+            font-size: 2rem;
+        }
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: calc($i * 100% / 12);
+        }
+    }
+
+    @for $i from 1 through 12 {
+        @include tablet {
+            .col-tablet-#{$i} {
+                width: calc($i * 100% / 12);
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        @include desktop {
+            .col-desktop-#{$i} {
+                width: calc($i * 100% / 12);
+            }
+        }
+    }
+
+    @include tablet {
+        justify-content: center;
+    }
+}
+

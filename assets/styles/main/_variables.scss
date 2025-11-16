@@ -1,0 +1,32 @@
+@use "./font";
+
+$font1: "Oswald", serif;
+
+$colors: (
+        primary: #2C5551,
+        light: #fefefe,
+        dark: #000000,
+);
+
+@each $colorName, $value in $colors {
+    .border-#{$colorName} {
+        border: 1px solid $value;
+    }
+
+    .text-#{$colorName} {
+        color: $value;
+    }
+
+    .btn-#{$colorName} {
+        background-color: $value;
+    }
+
+    .btn-outline-#{$colorName} {
+        border: 1px solid $value;
+        color: $value;
+    }
+
+    .bg-#{$colorName} {
+        background-color: $value;
+    }
+}

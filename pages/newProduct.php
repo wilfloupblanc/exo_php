@@ -40,21 +40,21 @@
     <h1>
         New Product
     </h1>
+    <section class="form-container">
+        <form action="" method="POST" class="col-12">
 
-    <form action="" method="POST">
+            <label for="name" class="col-12">Name</label>
+            <input type="text" id="name" name="name" class="col-12">
 
-        <p>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-        </p>
-        <p>
-            <label for="price">Price</label>
-            <input type="text" id="price" name="price">
-        </p>
-        <p>
-            <label for="description">Description</label>
-            <textarea type="textarea" id="description" name="description"></textarea>
-        </p>
-        <button>Add</button>
-    </form>
+            <label for="price" class="col-12">Price</label>
+            <input type="text" id="price" name="price" class="col-12">
+
+            <label for="description" class="col-12">Description</label>
+            <textarea type="textarea" id="description" name="description" class="col-12"></textarea>
+
+            <article class="submit-container" class="col-12">
+                <a href="" type="submit" class="bg-primary border-primary text-light">Ajouter</a>
+            </article>
+        </form>
+    </section>
 </main>

@@ -22,6 +22,8 @@
     <p>
         <?= $product['description'] ?>
     </p>
-    <a href="./pages/deleteProduct.php?id=<?= $product['id']?>">Delete</a>
-    <a href="index.php?page=editProduct&id=<?= $product['id']?>">Edit</a>
+    <article class="submit-container" class="col-12">
+        <a href="./pages/deleteProduct.php?id=<?= $product['id']?>" class="bg-primary border-primary text-light">Delete</a>
+        <a href="index.php?page=editProduct&id=<?= $product['id']?>" class="bg-primary border-primary text-light">Edit</a>
+    </article>
 </main>

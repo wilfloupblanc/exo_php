@@ -6,14 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link href="
+    https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.php?page=home">Home</a>
-            <a href="index.php?page=about">About</a>
-            <a href="index.php?page=newProduct">New Product</a>
-        </nav>
+    <header class="bg-primary">
+
+        <a href="index.php?page=home" class="logo"><img src="./assets/images/logo_exo.png" alt="logo e-commerce de couleur vert sapin"></a>
+
+        <section class="links">
+            <a href="index.php?page=signIn" class="text-light user"><i class="ph ph-user-circle"></i></a>
+
+            <label for="burger" class=" burger text-light">
+                <i class="ph ph-list"></i>
+            </label>
+            <input type="checkbox" id="burger">
+            <nav class="bg-primary">
+                <a href="index.php?page=about" class="text-light">About</a>
+                <a href="index.php?page=newProduct" class="text-light">New Product</a>
+            </nav>
+        </section>
+
     </header>
 
     <?php
@@ -39,8 +55,8 @@
 
         include_once './pages/' . $page . '.php';
     ?>
-    <footer>
-        <p>Ceci est un footer</p>
+    <footer class="bg-primary">
+        <h3 class="text-light"><i class="ph ph-copyright"></i> Wilf Loupblanc</h3>
     </footer>
 </body>
 </html>
